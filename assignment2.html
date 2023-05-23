@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Scrollable Center Area with Stationary Navbars and Sidebars</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="style2.css">
+        </head>
+        <body>
+
+
+ 
+            <!-- Top navbar -->
+            <div class="topnav">
+                <div class="member">
+                    <button class="button-28" role="button"><i class="fa fa-user-plus"></i> Membership</button>
+                    <button class="button-28" role="button"><i class="fa fa-user"></i> Account</button>
+
+                </div>
+            </div>
+
+
+
+            <!-- Left sidebar -->
+            <div class="sidebar-left">
+                <button class="button-28 button-28-left"><i class="fa fa-home"></i> Home</button><br>
+                <button class="button-28 button-28-left"><i class="fa fa-bars"></i> Menu</button><br>
+                <button class="button-28 button-28-left"><i class="fa fa-search"></i> Search</button><br>
+                <button class="button-28 button-28-left"><i class="fa fa-plus"></i>   Create Playlist</button><br>
+                <button class="button-28 button-28-left"><i class="fa fa-heart"></i> Liked Songs</button><br>
+                <div class="button-28 button-28-right">   </button></div><br>
+                <div class="button-28 button-28-right">   </button></div><br>
+
+                <section class="wrapper">
+                    <div class="top">MOOD</div>
+                    <div class="bottom" aria-hidden="true">MOOD</div>
+                </section>
+                <section class="wrapper">
+                    <div class="top">WINDOW</div>
+                    <div class="bottom" aria-hidden="true">WINDOW</div>
+                </section>
+                <section>
+                    <div class="right-box">
+                        <button class="but button-28 button-28-right">😄 Happy</button>
+                        <button class="but button-28 button-28-right">    😢 Dreamy</button><br>
+                        <button class="but button-28 button-28-right">😠 Laid Back</button>
+                        <button class="but button-28 button-28-right">😎 Sad</button><br>
+                        <button class="but button-28 button-28-right">😍 Running</button>
+                        <button class="but button-28 button-28-right">😴 Quirky</button><br>
+                    </div>
+                </section>  
+            </div>
+
+
+
+
+
+            <!-- Right sidebar -->
+            <div class="sidebar-right">\
+
+                <div class="popup side-photo photo1" id="popup1">
+                    <span class="close-btn" onclick="closePopup('popup1')">&times;</span>
+                    <p class="banner-list">Aashiqui 2</p>
+                   
+                        <button style="color: white;" id="playButton1" class="songButton" data-source="songs/Aashiqui/Aasan Nahin Yahan.mp3" class="button-28 button-28-left">⬛ Aasan Nahin Yahan</button><br>
+                        <button style="color: white;" id="playButton2" class="songButton" data-source="songs/Aashiqui/Aashiqui (The Love Theme).mp3" class="button-28 button-28-left">⬛ Aashiqui (The Love Theme)</button><br>
+                        <button style="color: white;" id="playButton3" class="songButton" data-source="songs/Aashiqui/Bhula Dena.mp3" class="button-28 button-28-left">⬛ Bhula Dena</button><br>
+                        <button style="color: white;" id="playButton4" class="songButton" data-source="songs/Aashiqui/Chahun Main Ya Naa.mp3" class="button-28 button-28-left">⬛ Chahun Main Ya Naa</button><br>
+                        <button style="color: white;" id="playButton5" class="songButton" data-source="songs/Aashiqui/Hum Mar Jayenge.mp3" class="button-28 button-28-left">⬛ Hum Mar Jayenge</button><br>
+                        <button style="color: white;" id="playButton6" class="songButton" data-source="songs/Aashiqui/Milne Hai Mujhse Aayi.mp3" class="button-28 button-28-left">⬛ Milne Hai Mujhse Aayi</button><br>
+                        <button style="color: white;" id="playButton6" class="songButton" data-source="songs/Aashiqui/Sunn Raha Hai (Male).mp3" class="button-28 button-28-left">⬛ Sunn Raha Hai (Male)</button><br>
+                
+                </div>
+
+
+
+                <div class="popup side-photo photo2" id="popup2">
+                    <span class="close-btn" onclick="closePopup('popup2')">&times;</span>
+                    <p class="banner-list">Rockstar</p>
+                   
+                        <button style="color: white; font-size: large;" id="playButton1" class="songButton" data-source="songs/Rockstar/Aur Ho - Rockstar 128 Kbps.mp3" class="button-28 button-28-left">⬛ Aur Ho </button><br>
+                        <button style="color: white; font-size: large; opacity: 1;" id="playButton2" class="songButton" data-source="songs/Rockstar/Haawa Haawa - Rockstar 128 Kbps.mp3" class="button-28 button-28-left">⬛ Haawa Haawa </button><br>
+                        <button style="color: white; font-size: large; opacity: 1;" id="playButton3" class="songButton" data-source="songs/Rockstar/Jo Bhi Main - Rockstar 128 Kbps.mp3" class="button-28 button-28-left">⬛ Jo Bhi Main </button><br>
+                        <button style="color: white; font-size: large; opacity: 1;" id="playButton4" class="songButton" data-source="songs/Rockstar/Katiya Karun - Rockstar 128 Kbps.mp3" class="button-28 button-28-left">⬛ Katiya Karun </button><br>
+                        <button style="color: white; font-size: large; opacity: 1;" id="playButton5" class="songButton" data-source="songs/Rockstar/Kun Faaya Kun - Rockstar 128 Kbps.mp3" class="button-28 button-28-left">⬛ Kun Faaya Kun </button><br>
+                        <button style="color: white; font-size: large; opacity: 1;" id="playButton6" class="songButton" data-source="songs/Rockstar/Nadaan Parindey - Rockstar 128 Kbps.mp3" class="button-28 button-28-left">⬛ Nadaan Parindey </button><br>
+                        <button style="color: white; font-size: large; opacity: 1;" id="playButton6" class="songButton" data-source="songs/Rockstar/Phir Se Ud Chala - Rockstar 128 Kbps.mp3" class="button-28 button-28-left">⬛ Phir Se Ud Chala </button><br>
+                        <button style="color: white; font-size: large; opacity: 1;" id="playButton6" class="songButton" data-source="songs/Rockstar/Saadda Haq (Featuring Orianthi Panagaris On Guitars) - Rockstar 128 Kbps.mp3" class="button-28 button-28-left">⬛ Saadda Haq </button><br>
+                        <button style="color: white; font-size: large; opacity: 1;" id="playButton6" class="songButton" data-source="songs/Rockstar/Tum Ho - Rockstar 128 Kbps.mp3" class="button-28 button-28-left">⬛ Tum Ho </button><br>
+                
+                </div>
+
+                <div class="popup side-photo photo3" id="popup3">
+                    <span class="close-btn" onclick="closePopup('popup3')">&times;</span>
+                    <p class="banner-list">Veer Zaara</p>
+                   
+                        <button style="color: white; font-size: large; opacity: 1;" id="playButton1" class="songButton" data-source="songs/Veer-Zaara/Do Pal - Veer-Zaara 128 Kbps.mp3" class="button-28 button-28-left">⬛  Do Pal </button><br>
+                        <button style="color: white; font-size: large; opacity: 1;" id="playButton1" class="songButton" data-source="songs/Veer-Zaara/Jaane Kyon - Veer-Zaara 128 Kbps.mp3" class="button-28 button-28-left">⬛  Jaane Kyon </button><br>
+                        <button style="color: white; font-size: large; opacity: 1;" id="playButton1" class="songButton" data-source="songs/Veer-Zaara/Kyon Hawa - Veer-Zaara 128 Kbps.mp3" class="button-28 button-28-left">⬛  Kyon Hawa </button><br>
+                        <button style="color: white; font-size: large; opacity: 1;" id="playButton1" class="songButton" data-source="songs/Veer-Zaara/Main Yahaan Hoon - Veer-Zaara 128 Kbps.mp3" class="button-28 button-28-left">⬛  Main Yahaan Hoon </button><br>
+                        <button style="color: white; font-size: large; opacity: 1;" id="playButton1" class="songButton" data-source="songs/Veer-Zaara/Tere Liye - Veer-Zaara 128 Kbps.mp3" class="button-28 button-28-left">⬛  Tere Liye </button><br>
+                        <button style="color: white; font-size: large; opacity: 1;" id="playButton1" class="songButton" data-source="songs/Veer-Zaara/Yeh Hum Aa Gaye Hain Kahaan - Veer-Zaara 128 Kbps.mp3" class="button-28 button-28-left">⬛  Yeh Hum Aa Gaye Hain Kahaan </button><br>
+                
+                </div>
+
+
+
+            </div>
+
+            
+
+
+            <!-- Main content area -->
+
+            
+
+
+            <div class="main-content">
+                <div class="box1">
+                    <div class="center">
+                        <h1>
+                          <span>Trending</span>
+                          <span>Trending</span>
+                          <span>Trending</span>
+                        </h1>
+                    </div>
+                </div>
+
+
+            <div class="vertical">
+                <p class="banner banner-position-1">ALBUMS
+            </p>
+            </div>
+
+
+
+
+                <div class="box boxes photo photo1" >
+                    <button onclick="openPopup('popup1')" style="background-color: transparent; border-width: 0px;">
+                         <svg  id="play" style="opacity: 1;" viewBox="0 0 163 163" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"="0px">
+    
+                            <g fill="none">
+                                <g  transform="translate(2.000000, 2.000000)" stroke-width="4">
+                                    <path d="M10,80 C10,118.107648 40.8923523,149 79,149 L79,149 C117.107648,149 148,118.107648 148,80 C148,41.8923523 117.107648,11 79,11" id="lineOne" stroke="#ffffff" filter="url(#glowEffect)"></path><path d="M105.9,74.4158594 L67.2,44.2158594 C63.5,41.3158594 58,43.9158594 58,48.7158594 L58,109.015859 C58,113.715859 63.4,116.415859 67.2,113.515859 L105.9,83.3158594 C108.8,81.1158594 108.8,76.6158594 105.9,74.4158594 L105.9,74.4158594 Z" id="triangle" stroke="#ffffff" filter="url(#glowEffect)"></path><path d="M159,79.5 C159,35.5933624 123.406638,0 79.5,0 C35.5933624,0 0,35.5933624 0,79.5 C0,123.406638 35.5933624,159 79.5,159 L79.5,159" id="lineTwo" stroke="#ffffff" filter="url(#glowEffect)"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                </a>
+                </div>
+                <div class="box boxes photo photo2" >
+                    <button onclick="openPopup('popup2')" style="background-color: transparent; border-width: 0px;">
+                         <svg  id="play" style="opacity: 1;" viewBox="0 0 163 163" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"="0px">
+    
+                            <g fill="none">
+                                <g  transform="translate(2.000000, 2.000000)" stroke-width="4">
+                                    <path d="M10,80 C10,118.107648 40.8923523,149 79,149 L79,149 C117.107648,149 148,118.107648 148,80 C148,41.8923523 117.107648,11 79,11" id="lineOne" stroke="#ffffff" filter="url(#glowEffect)"></path><path d="M105.9,74.4158594 L67.2,44.2158594 C63.5,41.3158594 58,43.9158594 58,48.7158594 L58,109.015859 C58,113.715859 63.4,116.415859 67.2,113.515859 L105.9,83.3158594 C108.8,81.1158594 108.8,76.6158594 105.9,74.4158594 L105.9,74.4158594 Z" id="triangle" stroke="#ffffff" filter="url(#glowEffect)"></path><path d="M159,79.5 C159,35.5933624 123.406638,0 79.5,0 C35.5933624,0 0,35.5933624 0,79.5 C0,123.406638 35.5933624,159 79.5,159 L79.5,159" id="lineTwo" stroke="#ffffff" filter="url(#glowEffect)"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                </a>
+                </div>
+                <div class="box boxes photo photo3" >
+                    <button onclick="openPopup('popup3')"  style="background-color: transparent; border-width: 0px;">
+                         <svg  id="play" style="opacity: 1;" viewBox="0 0 163 163" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"="0px">
+    
+                            <g fill="none">
+                                <g  transform="translate(2.000000, 2.000000)" stroke-width="4">
+                                    <path d="M10,80 C10,118.107648 40.8923523,149 79,149 L79,149 C117.107648,149 148,118.107648 148,80 C148,41.8923523 117.107648,11 79,11" id="lineOne" stroke="#ffffff" filter="url(#glowEffect)"></path><path d="M105.9,74.4158594 L67.2,44.2158594 C63.5,41.3158594 58,43.9158594 58,48.7158594 L58,109.015859 C58,113.715859 63.4,116.415859 67.2,113.515859 L105.9,83.3158594 C108.8,81.1158594 108.8,76.6158594 105.9,74.4158594 L105.9,74.4158594 Z" id="triangle" stroke="#ffffff" filter="url(#glowEffect)"></path><path d="M159,79.5 C159,35.5933624 123.406638,0 79.5,0 C35.5933624,0 0,35.5933624 0,79.5 C0,123.406638 35.5933624,159 79.5,159 L79.5,159" id="lineTwo" stroke="#ffffff" filter="url(#glowEffect)"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                </a>
+                </div>
+                <div class="box boxes photo photo4" >
+                    <button onclick="openPopup('popup4')"  style="background-color: transparent; border-width: 0px;">
+                         <svg  id="play" style="opacity: 1;" viewBox="0 0 163 163" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"="0px">
+    
+                            <g fill="none">
+                                <g  transform="translate(2.000000, 2.000000)" stroke-width="4">
+                                    <path d="M10,80 C10,118.107648 40.8923523,149 79,149 L79,149 C117.107648,149 148,118.107648 148,80 C148,41.8923523 117.107648,11 79,11" id="lineOne" stroke="#ffffff" filter="url(#glowEffect)"></path><path d="M105.9,74.4158594 L67.2,44.2158594 C63.5,41.3158594 58,43.9158594 58,48.7158594 L58,109.015859 C58,113.715859 63.4,116.415859 67.2,113.515859 L105.9,83.3158594 C108.8,81.1158594 108.8,76.6158594 105.9,74.4158594 L105.9,74.4158594 Z" id="triangle" stroke="#ffffff" filter="url(#glowEffect)"></path><path d="M159,79.5 C159,35.5933624 123.406638,0 79.5,0 C35.5933624,0 0,35.5933624 0,79.5 C0,123.406638 35.5933624,159 79.5,159 L79.5,159" id="lineTwo" stroke="#ffffff" filter="url(#glowEffect)"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                </a>
+                </div>
+                <div class="box boxes photo photo5" >
+                    <button onclick="openPopup('popup5')"  style="background-color: transparent; border-width: 0px;">
+                         <svg  id="play" style="opacity: 1;" viewBox="0 0 163 163" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"="0px">
+    
+                            <g fill="none">
+                                <g  transform="translate(2.000000, 2.000000)" stroke-width="4">
+                                    <path d="M10,80 C10,118.107648 40.8923523,149 79,149 L79,149 C117.107648,149 148,118.107648 148,80 C148,41.8923523 117.107648,11 79,11" id="lineOne" stroke="#ffffff" filter="url(#glowEffect)"></path><path d="M105.9,74.4158594 L67.2,44.2158594 C63.5,41.3158594 58,43.9158594 58,48.7158594 L58,109.015859 C58,113.715859 63.4,116.415859 67.2,113.515859 L105.9,83.3158594 C108.8,81.1158594 108.8,76.6158594 105.9,74.4158594 L105.9,74.4158594 Z" id="triangle" stroke="#ffffff" filter="url(#glowEffect)"></path><path d="M159,79.5 C159,35.5933624 123.406638,0 79.5,0 C35.5933624,0 0,35.5933624 0,79.5 C0,123.406638 35.5933624,159 79.5,159 L79.5,159" id="lineTwo" stroke="#ffffff" filter="url(#glowEffect)"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                </a>
+                </div>
+                <div class="box boxes photo photo6" >
+                    <button onclick="openPopup('popup6')"  style="background-color: transparent; border-width: 0px;">
+                         <svg  id="play" style="opacity: 1;" viewBox="0 0 163 163" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"="0px">
+    
+                            <g fill="none">
+                                <g  transform="translate(2.000000, 2.000000)" stroke-width="4">
+                                    <path d="M10,80 C10,118.107648 40.8923523,149 79,149 L79,149 C117.107648,149 148,118.107648 148,80 C148,41.8923523 117.107648,11 79,11" id="lineOne" stroke="#ffffff" filter="url(#glowEffect)"></path><path d="M105.9,74.4158594 L67.2,44.2158594 C63.5,41.3158594 58,43.9158594 58,48.7158594 L58,109.015859 C58,113.715859 63.4,116.415859 67.2,113.515859 L105.9,83.3158594 C108.8,81.1158594 108.8,76.6158594 105.9,74.4158594 L105.9,74.4158594 Z" id="triangle" stroke="#ffffff" filter="url(#glowEffect)"></path><path d="M159,79.5 C159,35.5933624 123.406638,0 79.5,0 C35.5933624,0 0,35.5933624 0,79.5 C0,123.406638 35.5933624,159 79.5,159 L79.5,159" id="lineTwo" stroke="#ffffff" filter="url(#glowEffect)"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                </a>
+                </div>
+                <div class="box boxes photo photo7" >
+                    <button onclick="openPopup('popup7')"  style="background-color: transparent; border-width: 0px;">
+                         <svg  id="play" style="opacity: 1;" viewBox="0 0 163 163" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"="0px">
+    
+                            <g fill="none">
+                                <g  transform="translate(2.000000, 2.000000)" stroke-width="4">
+                                    <path d="M10,80 C10,118.107648 40.8923523,149 79,149 L79,149 C117.107648,149 148,118.107648 148,80 C148,41.8923523 117.107648,11 79,11" id="lineOne" stroke="#ffffff" filter="url(#glowEffect)"></path><path d="M105.9,74.4158594 L67.2,44.2158594 C63.5,41.3158594 58,43.9158594 58,48.7158594 L58,109.015859 C58,113.715859 63.4,116.415859 67.2,113.515859 L105.9,83.3158594 C108.8,81.1158594 108.8,76.6158594 105.9,74.4158594 L105.9,74.4158594 Z" id="triangle" stroke="#ffffff" filter="url(#glowEffect)"></path><path d="M159,79.5 C159,35.5933624 123.406638,0 79.5,0 C35.5933624,0 0,35.5933624 0,79.5 C0,123.406638 35.5933624,159 79.5,159 L79.5,159" id="lineTwo" stroke="#ffffff" filter="url(#glowEffect)"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                </a>
+                </div>
+                <div class="box boxes photo photo8" >
+                    <button onclick="openPopup('popup8')"  style="background-color: transparent; border-width: 0px;">
+                         <svg  id="play" style="opacity: 1;" viewBox="0 0 163 163" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"="0px">
+    
+                            <g fill="none">
+                                <g  transform="translate(2.000000, 2.000000)" stroke-width="4">
+                                    <path d="M10,80 C10,118.107648 40.8923523,149 79,149 L79,149 C117.107648,149 148,118.107648 148,80 C148,41.8923523 117.107648,11 79,11" id="lineOne" stroke="#ffffff" filter="url(#glowEffect)"></path><path d="M105.9,74.4158594 L67.2,44.2158594 C63.5,41.3158594 58,43.9158594 58,48.7158594 L58,109.015859 C58,113.715859 63.4,116.415859 67.2,113.515859 L105.9,83.3158594 C108.8,81.1158594 108.8,76.6158594 105.9,74.4158594 L105.9,74.4158594 Z" id="triangle" stroke="#ffffff" filter="url(#glowEffect)"></path><path d="M159,79.5 C159,35.5933624 123.406638,0 79.5,0 C35.5933624,0 0,35.5933624 0,79.5 C0,123.406638 35.5933624,159 79.5,159 L79.5,159" id="lineTwo" stroke="#ffffff" filter="url(#glowEffect)"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                </a>
+                </div>
+                <div class="box boxes photo photo9" >
+                    <button onclick="openPopup('popup9')"  style="background-color: transparent; border-width: 0px;">
+                         <svg  id="play" style="opacity: 1;" viewBox="0 0 163 163" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"="0px">
+    
+                            <g fill="none">
+                                <g  transform="translate(2.000000, 2.000000)" stroke-width="4">
+                                    <path d="M10,80 C10,118.107648 40.8923523,149 79,149 L79,149 C117.107648,149 148,118.107648 148,80 C148,41.8923523 117.107648,11 79,11" id="lineOne" stroke="#ffffff" filter="url(#glowEffect)"></path><path d="M105.9,74.4158594 L67.2,44.2158594 C63.5,41.3158594 58,43.9158594 58,48.7158594 L58,109.015859 C58,113.715859 63.4,116.415859 67.2,113.515859 L105.9,83.3158594 C108.8,81.1158594 108.8,76.6158594 105.9,74.4158594 L105.9,74.4158594 Z" id="triangle" stroke="#ffffff" filter="url(#glowEffect)"></path><path d="M159,79.5 C159,35.5933624 123.406638,0 79.5,0 C35.5933624,0 0,35.5933624 0,79.5 C0,123.406638 35.5933624,159 79.5,159 L79.5,159" id="lineTwo" stroke="#ffffff" filter="url(#glowEffect)"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                </a>
+                </div>
+                <div class="box boxes photo photo10" >
+                    <button onclick="openPopup('popup10')"  style="background-color: transparent; border-width: 0px;">
+                         <svg  id="play" style="opacity: 1;" viewBox="0 0 163 163" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"="0px">
+    
+                            <g fill="none">
+                                <g  transform="translate(2.000000, 2.000000)" stroke-width="4">
+                                    <path d="M10,80 C10,118.107648 40.8923523,149 79,149 L79,149 C117.107648,149 148,118.107648 148,80 C148,41.8923523 117.107648,11 79,11" id="lineOne" stroke="#ffffff" filter="url(#glowEffect)"></path><path d="M105.9,74.4158594 L67.2,44.2158594 C63.5,41.3158594 58,43.9158594 58,48.7158594 L58,109.015859 C58,113.715859 63.4,116.415859 67.2,113.515859 L105.9,83.3158594 C108.8,81.1158594 108.8,76.6158594 105.9,74.4158594 L105.9,74.4158594 Z" id="triangle" stroke="#ffffff" filter="url(#glowEffect)"></path><path d="M159,79.5 C159,35.5933624 123.406638,0 79.5,0 C35.5933624,0 0,35.5933624 0,79.5 C0,123.406638 35.5933624,159 79.5,159 L79.5,159" id="lineTwo" stroke="#ffffff" filter="url(#glowEffect)"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                </a>
+                </div>
+                <div class="box boxes photo photo11" >
+                    <button onclick="openPopup('popup11')"  style="background-color: transparent; border-width: 0px;">
+                         <svg  id="play" style="opacity: 1;" viewBox="0 0 163 163" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"="0px">
+    
+                            <g fill="none">
+                                <g  transform="translate(2.000000, 2.000000)" stroke-width="4">
+                                    <path d="M10,80 C10,118.107648 40.8923523,149 79,149 L79,149 C117.107648,149 148,118.107648 148,80 C148,41.8923523 117.107648,11 79,11" id="lineOne" stroke="#ffffff" filter="url(#glowEffect)"></path><path d="M105.9,74.4158594 L67.2,44.2158594 C63.5,41.3158594 58,43.9158594 58,48.7158594 L58,109.015859 C58,113.715859 63.4,116.415859 67.2,113.515859 L105.9,83.3158594 C108.8,81.1158594 108.8,76.6158594 105.9,74.4158594 L105.9,74.4158594 Z" id="triangle" stroke="#ffffff" filter="url(#glowEffect)"></path><path d="M159,79.5 C159,35.5933624 123.406638,0 79.5,0 C35.5933624,0 0,35.5933624 0,79.5 C0,123.406638 35.5933624,159 79.5,159 L79.5,159" id="lineTwo" stroke="#ffffff" filter="url(#glowEffect)"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                </a>
+                </div>
+                <div class="box boxes photo photo12" >
+                    <button onclick="openPopup('popup12')"  style="background-color: transparent; border-width: 0px;">
+                         <svg  id="play" style="opacity: 1;" viewBox="0 0 163 163" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"="0px">
+    
+                            <g fill="none">
+                                <g  transform="translate(2.000000, 2.000000)" stroke-width="4">
+                                    <path d="M10,80 C10,118.107648 40.8923523,149 79,149 L79,149 C117.107648,149 148,118.107648 148,80 C148,41.8923523 117.107648,11 79,11" id="lineOne" stroke="#ffffff" filter="url(#glowEffect)"></path><path d="M105.9,74.4158594 L67.2,44.2158594 C63.5,41.3158594 58,43.9158594 58,48.7158594 L58,109.015859 C58,113.715859 63.4,116.415859 67.2,113.515859 L105.9,83.3158594 C108.8,81.1158594 108.8,76.6158594 105.9,74.4158594 L105.9,74.4158594 Z" id="triangle" stroke="#ffffff" filter="url(#glowEffect)"></path><path d="M159,79.5 C159,35.5933624 123.406638,0 79.5,0 C35.5933624,0 0,35.5933624 0,79.5 C0,123.406638 35.5933624,159 79.5,159 L79.5,159" id="lineTwo" stroke="#ffffff" filter="url(#glowEffect)"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                </a>
+                </div>
+                <div class="box boxes photo photo13" >
+                    <button onclick="openPopup('popup13')"  style="background-color: transparent; border-width: 0px;">
+                         <svg  id="play" style="opacity: 1;" viewBox="0 0 163 163" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"="0px">
+    
+                            <g fill="none">
+                                <g  transform="translate(2.000000, 2.000000)" stroke-width="4">
+                                    <path d="M10,80 C10,118.107648 40.8923523,149 79,149 L79,149 C117.107648,149 148,118.107648 148,80 C148,41.8923523 117.107648,11 79,11" id="lineOne" stroke="#ffffff" filter="url(#glowEffect)"></path><path d="M105.9,74.4158594 L67.2,44.2158594 C63.5,41.3158594 58,43.9158594 58,48.7158594 L58,109.015859 C58,113.715859 63.4,116.415859 67.2,113.515859 L105.9,83.3158594 C108.8,81.1158594 108.8,76.6158594 105.9,74.4158594 L105.9,74.4158594 Z" id="triangle" stroke="#ffffff" filter="url(#glowEffect)"></path><path d="M159,79.5 C159,35.5933624 123.406638,0 79.5,0 C35.5933624,0 0,35.5933624 0,79.5 C0,123.406638 35.5933624,159 79.5,159 L79.5,159" id="lineTwo" stroke="#ffffff" filter="url(#glowEffect)"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                </a>
+                </div>
+                <div class="box boxes photo photo14" >
+                    <button onclick="openPopup('popup14')"  style="background-color: transparent; border-width: 0px;">
+                         <svg  id="play" style="opacity: 1;" viewBox="0 0 163 163" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"="0px">
+    
+                            <g fill="none">
+                                <g  transform="translate(2.000000, 2.000000)" stroke-width="4">
+                                    <path d="M10,80 C10,118.107648 40.8923523,149 79,149 L79,149 C117.107648,149 148,118.107648 148,80 C148,41.8923523 117.107648,11 79,11" id="lineOne" stroke="#ffffff" filter="url(#glowEffect)"></path><path d="M105.9,74.4158594 L67.2,44.2158594 C63.5,41.3158594 58,43.9158594 58,48.7158594 L58,109.015859 C58,113.715859 63.4,116.415859 67.2,113.515859 L105.9,83.3158594 C108.8,81.1158594 108.8,76.6158594 105.9,74.4158594 L105.9,74.4158594 Z" id="triangle" stroke="#ffffff" filter="url(#glowEffect)"></path><path d="M159,79.5 C159,35.5933624 123.406638,0 79.5,0 C35.5933624,0 0,35.5933624 0,79.5 C0,123.406638 35.5933624,159 79.5,159 L79.5,159" id="lineTwo" stroke="#ffffff" filter="url(#glowEffect)"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                </a>
+                </div>
+                <div class="box boxes photo photo15" >
+                    <button onclick="openPopup('popup15')"  style="background-color: transparent; border-width: 0px;">
+                         <svg  id="play" style="opacity: 1;" viewBox="0 0 163 163" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"="0px">
+    
+                            <g fill="none">
+                                <g  transform="translate(2.000000, 2.000000)" stroke-width="4">
+                                    <path d="M10,80 C10,118.107648 40.8923523,149 79,149 L79,149 C117.107648,149 148,118.107648 148,80 C148,41.8923523 117.107648,11 79,11" id="lineOne" stroke="#ffffff" filter="url(#glowEffect)"></path><path d="M105.9,74.4158594 L67.2,44.2158594 C63.5,41.3158594 58,43.9158594 58,48.7158594 L58,109.015859 C58,113.715859 63.4,116.415859 67.2,113.515859 L105.9,83.3158594 C108.8,81.1158594 108.8,76.6158594 105.9,74.4158594 L105.9,74.4158594 Z" id="triangle" stroke="#ffffff" filter="url(#glowEffect)"></path><path d="M159,79.5 C159,35.5933624 123.406638,0 79.5,0 C35.5933624,0 0,35.5933624 0,79.5 C0,123.406638 35.5933624,159 79.5,159 L79.5,159" id="lineTwo" stroke="#ffffff" filter="url(#glowEffect)"></path>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                </a>
+                </div>
+
+
+
+
+
+
+
+                <div class="vertical">
+                    <p class="banner banner-position-2">SINGERS
+                </p>
+                </div>
+                <div class="vertical">
+                    <p class="banner banner-position-3">GENRES
+                </p>
+                </div>                
+                <div class="vertical">
+                    <p class="banner banner-position-4" style="font-size: 38px;">PLAYLISTS
+                </p>
+                </div> 
+            </div>
+
+
+            <!-- Footer sidebar -->
+            <div class="footer">
+
+                
+
+
+                <div id="player">
+                    <audio id="audioPlayer" controls></audio>
+                    
+                </div>
+                <div style="position:relative; left: 1000px; top: -65px;" class="member">
+                    <a href="/music player1/js.html">
+                        <button class="button-28 position-button" role="button"><i class="fa fa-expand"></i></button>
+                    </a>
+                </div>
+
+                
+
+                
+            </div>    
+
+            
+            <script src="script2.js"></script>
+        </body>
+    </html>        
