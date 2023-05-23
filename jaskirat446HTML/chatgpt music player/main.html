@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .left-box {
+      width: 50%;
+      background-color: lightblue;
+      float: left;
+      height: 100vh;
+    }
+
+    .right-box {
+      width: 50%;
+      background-color: lightgreen;
+      float: right;
+      height: 100vh;
+      position: relative;
+    }
+
+    .left-box button {
+      margin: 20px;
+    }
+
+    .popup {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      display: none;
+    }
+
+    .popup .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="left-box">
+    <button onclick="openPopup('popup1')">Click Me 1</button>
+    <button onclick="openPopup('popup2')">Click Me 2</button>
+  </div>
+  <div class="right-box">
+    <div class="popup" id="popup1">
+      <span class="close-btn" onclick="closePopup('popup1')">&times;</span>
+      <h3>Popup 1 Content</h3>
+      <p>This is the content of the first popup window.</p>
+    </div>
+    <div class="popup" id="popup2">
+      <span class="close-btn" onclick="closePopup('popup2')">&times;</span>
+      <h3>Popup 2 Content</h3>
+      <p>This is the content of the second popup window.</p>
+    </div>
+  </div>
+
+  <script>
+    function openPopup(popupId) {
+      var popup = document.getElementById(popupId);
+      closeAllPopups(); // Close all popups before opening a new one
+      popup.style.display = "block";
+    }
+
+    function closePopup(popupId) {
+      var popup = document.getElementById(popupId);
+      popup.style.display = "none";
+    }
+
+    function closeAllPopups() {
+      var popups = document.getElementsByClassName("popup");
+      for (var i = 0; i < popups.length; i++) {
+        popups[i].style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
