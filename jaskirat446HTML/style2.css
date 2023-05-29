@@ -128,14 +128,31 @@ body {
     align-items: center;
 }
 
-.box1 {
-    width: 677px;
-    height: 230px;
-    margin: 34px;
-    border-radius: 10px;
-    font-size: 32px;
-  background-color: #000000;
+.carousel {
+  width: 677px;
+  height: 230px;
+  overflow: hidden;
+  position: relative;
 }
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel .slide {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel .active {
+  opacity: 1;
+}
+
 
 .boxes {
   background-color: #323232;
