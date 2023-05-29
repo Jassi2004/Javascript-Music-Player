@@ -16,7 +16,7 @@ main {
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
-  background-color: #420348;
+  background-image: linear-gradient( #e3be9b  ,  #fea552);
   padding: 2rem;
   display: flex;
   align-items: center;
@@ -111,7 +111,7 @@ form.sign-up-form {
 }
 
 .toggle:hover {
-  color: #420348;
+  color: #e3be9b;
 }
 
 .input-wrap {
@@ -169,7 +169,7 @@ label {
 }
 
 .sign-btn:hover {
-  background-color: #420348;
+  background-color: #e3be9b;
 }
 
 .text {
@@ -183,7 +183,7 @@ label {
 }
 
 .text a:hover {
-  color: #420348;
+  color: #e3be9b;
 }
 
 main.sign-up-mode form.sign-in-form {
@@ -218,12 +218,25 @@ main.sign-up-mode .carousel {
   overflow: hidden;
   transition: 0.8s ease-in-out;
 }
-
-.images-wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
+
+.carousel .slide {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel .active {
+  opacity: 1;
+}
+
+
 
 .image {
    
@@ -346,50 +359,28 @@ main.sign-up-mode .carousel {
     transform: translateX(0%);
   }
 
-  .carousel {
-    position: revert;
-    height: auto;
-    width: 100%;
-    padding: 3rem 2rem;
-    display: flex;
-  }
-
-  .images-wrapper {
-    display: none;
-  }
-
-  .text-slider {
-    width: 100%;
-  }
-}
-
-@media (max-width: 530px) {
-  main {
-    padding: 1rem;
-  }
-
-  .box {
-    border-radius: 2rem;
-  }
-
-  .inner-box {
-    padding: 1rem;
-  }
 
   .carousel {
-    padding: 1.5rem 1rem;
-    border-radius: 1.6rem;
+    width: 677px;
+    height: 230px;
+    overflow: hidden;
+    position: relative;
   }
-
-  .text-wrap {
-    margin-bottom: 1rem;
+  
+  .carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
-
-  .text-group h2 {
-    font-size: 1.2rem;
+  
+  .carousel .slide {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
-
-  form {
-    padding: 1rem 2rem 1.5rem;
+  
+  .carousel .active {
+    opacity: 1;
   }
-}
